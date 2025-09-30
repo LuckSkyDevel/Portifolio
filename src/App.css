@@ -68,6 +68,8 @@ nav {
   text-align: justify;
   letter-spacing: 0.03em;
 
+  cursor: default;
+
   /* Inside auto layout */
   flex: none;
   order: 1;
@@ -193,6 +195,21 @@ nav {
   color: #dddddd;
 }
 
+.contact-icons-heading {
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-icons-heading svg {
+  font-size: 3.5rem;
+  margin-right: 2.25rem;
+  color: #acbcbd;
+}
+
+.contact-icons-heading svg:hover {
+  color: #00C8B3;
+}
+
 .secondary-button {
   padding: 1rem 2.5rem;
   background-color: #00C8B3;
@@ -275,15 +292,13 @@ nav {
 }
 
 .about-container {
-  /* display: flex; */
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0 80px;
-  /* gap: 51px; */
 
-  width: 1200px;
-  height: 699px;
+  width: 100%;
+  height: 700px;
 
 
   /* Inside auto layout */
@@ -332,6 +347,19 @@ nav {
   -webkit-text-fill-color: transparent;
 }
 
+.tech-section {
+  margin-top: 15rem;
+  margin-bottom: 15rem;
+  width: 100%;
+}
+
+.tech-section-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .tech-text {
   font-size: clamp(0.5rem, 1.5vw, 1rem);
   max-width: 500px;
@@ -352,4 +380,27 @@ nav {
   align-items: center;
 
   gap: 100px;
+}
+
+.tech-bannerImage-container {
+  position: absolute;
+  z-index: -2;
+  max-width: 1200px;
+  left: -45px;
+}
+
+.contact-container {
+  align-items: center;
+  padding: 0 80px;
+
+  width: 100%;
+  height: 200px;
+  margin: 5rem 0;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
 }

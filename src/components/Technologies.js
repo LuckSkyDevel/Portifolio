@@ -1,19 +1,22 @@
 import React from 'react';
-import { BsAspectRatio } from "react-icons/bs";
+import TechGif from '../assets/tech2.gif';
 import { BsDatabase } from "react-icons/bs";
 import { BsSlack } from "react-icons/bs";
 import { FaNodeJs } from "react-icons/fa6";
 
 function Technologies() {
     return (
-        <div id="technologies" className="project-section-wrapper">
-            <div className="project-section-top">
+        <div id="technologies" className="tech-section">
+            <div className="tech-section-top">
                 <h1 className="primary-heading">Technologies</h1>
                 <p className="primary-text">
                     I've worked with a range of technologies in the web development market.
                 </p>
             </div>
             <div className='tech-container'>
+                <div className="tech-bannerImage-container">
+                    <img src={TechGif} alt="" />
+                </div>
                 <div className='tech-text'>
                     <p className="title-tech-text">
                         <FaNodeJs color='white' /> FrontEnd
