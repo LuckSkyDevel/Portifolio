@@ -43,8 +43,7 @@ function Projects() {
             <div className="project-section-top">
                 <h1 className="primary-heading">Projects & Experiences</h1>
                 <p className="primary-text">
-                    Lorem ipsum dolor sit amet consectetur. Non tincidunt magna non et
-                    elit. Dolor turpis molestie dui magnis facilisis at fringilla quam.
+                    Some of my main projects and experiences I've worked on.
                 </p>
             </div>
             <div className="project-section-bottom">

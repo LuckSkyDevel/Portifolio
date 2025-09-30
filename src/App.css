@@ -317,7 +317,7 @@ nav {
 
 .about-primary-text {
   font-size: clamp(1rem, 3vw, 1.5rem);
-  max-width: 100%;
+  max-width: 80%;
   background: linear-gradient(90deg, #FFFFFF 0%, #6a6a6a 100%);
   margin: 1.5rem 0rem;
   text-align: justify;
