@@ -1,7 +1,7 @@
 import React from 'react';
 import TechGif from '../assets/tech2.gif';
 import Navbar from './Navbar';
-import { FiArrowRight } from "react-icons/fi";
+// import { FiArrowRight } from "react-icons/fi";
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 function Home() {

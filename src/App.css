@@ -404,3 +404,63 @@ nav {
   justify-content: center;
   align-items: flex-start;
 }
+
+@media screen and (max-width: 1024px) {
+  .home-banner-container {
+    flex-direction: column;
+    height: auto;
+    padding: 0 25px;
+    margin-top: 50px;
+    gap: 20px;
+  }
+
+  .home-image-section {
+    margin-top: 0px;
+    max-width: 100%;
+  }
+
+  .home-bannerImage-container {
+    top: 190px;
+    right: -115px;
+  }
+
+  .tech-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tech-bannerImage-container {
+    left: 0;
+  }
+
+  .tech-text {
+    font-size: clamp(1.3rem, 2.7vw, 1.5rem);
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .title-tech-text {
+    font-size: clamp(1.5rem, 3vw, 1.5rem);
+  }
+
+  .about-container{
+    padding: 0 20px;
+  }
+
+  .about-text-section {
+    align-items: center;
+  }
+
+  .contact-container {
+    padding: 0 20px;
+    height: auto;
+    text-align: center;
+  }
+
+  .contact-section {
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+}

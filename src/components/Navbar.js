@@ -1,6 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { FaJsSquare } from "react-icons/fa";
 import { Link } from 'react-scroll';
+import { useViewportSize } from '@mantine/hooks'
+import { MenuIcon, XIcon } from 'lucide-react'
 
 
 const Navbar = () => {
