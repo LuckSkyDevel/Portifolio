@@ -405,7 +405,29 @@ nav {
   align-items: flex-start;
 }
 
+.button-menu {
+  display: none;
+}
+
 @media screen and (max-width: 1024px) {
+
+  .App {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  nav {
+    padding: 0 20px;
+  }
+
+  .nav-logo-container {
+    margin: 0;
+  }
+
+  .navbar-links-container {
+    display: none;
+  }
+
   .home-banner-container {
     flex-direction: column;
     height: auto;
@@ -420,8 +442,13 @@ nav {
   }
 
   .home-bannerImage-container {
-    top: 190px;
-    right: -115px;
+    top: 290px;
+    right: 40px;
+    max-width: 200px;
+  }
+
+  .project-section-top {
+    text-align: center;
   }
 
   .tech-container {
@@ -444,7 +471,7 @@ nav {
     font-size: clamp(1.5rem, 3vw, 1.5rem);
   }
 
-  .about-container{
+  .about-container {
     padding: 0 20px;
   }
 
@@ -461,6 +488,31 @@ nav {
   .contact-section {
     align-items: center;
     flex-wrap: wrap;
+  }
+
+  .button-menu {
+    background: transparent;
+    color: #959595;
+    font-size: 2.5rem;
+    display: block;
+    right: 125px;
+    position: absolute;
+    text-align: center;
+    border: none;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .nav-logo-container {
+    font-size: 25px;
+  }
+
+  .button-menu {
+    right: 35px;
   }
 
 }

@@ -1,8 +1,9 @@
 import React, { useRef, useState } from 'react';
 import { FaJsSquare } from "react-icons/fa";
 import { Link } from 'react-scroll';
-import { useViewportSize } from '@mantine/hooks'
-import { MenuIcon, XIcon } from 'lucide-react'
+import { BsList } from "react-icons/bs";
+import { BsX } from "react-icons/bs";
+import { useViewportSize } from '@mantine/hooks';
 
 
 const Navbar = () => {
@@ -22,18 +23,50 @@ const Navbar = () => {
         duration: 500,
     };
 
+    const navLinks = [
+        { to: "home", label: "Home" },
+        { to: "projects", label: "Projects" },
+        { to: "technologies", label: "Technologies" },
+        { to: "about", label: "About" },
+        { to: "contact", label: "Contact" },
+    ];
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { width } = useViewportSize();
+
+  const isMobile = width < 1024; // below md breakpoint
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
+  const closeMenuOnMobile = () => {
+    if (isMobile) {
+      setIsMenuOpen(false);
+    }
+  }
+
     return (
+
         <nav ref={navRef}>
             <div className="nav-logo-container">
                 <FaJsSquare style={{ background: "linear-gradient(180deg, #00C8B3 0%, #006258 100%)" }} /> Lucas Carvalho
             </div>
             <div className='navbar-links-container'>
-                <Link to="home" {...linkProps}>Home</Link>
-                <Link to="projects" {...linkProps}>Projects</Link>
-                <Link to="technologies" {...linkProps}>Technologies</Link>
-                <Link to="about" {...linkProps}>About</Link>
-                <Link to="contact" {...linkProps}>Contact</Link>
+                {navLinks.map((link) => (
+                    <Link key={link.to} to={link.to} {...linkProps}>
+                        {link.label}
+                    </Link>
+                ))}
             </div>
+            
+            <button className='button-menu' onClick={() => { toggleMenu(); toggleNavbar(); closeMenuOnMobile(); }}>
+                {isMenuOpen ?
+                    <BsX className='size-6 text-secondary' />
+                    :
+                    <BsList className='size-6 text-secondary' />
+                }
+            </button>
         </nav>
     );
 };
