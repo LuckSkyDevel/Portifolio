@@ -3,7 +3,13 @@ import { FaJsSquare } from "react-icons/fa";
 import { Link } from 'react-scroll';
 import { BsList } from "react-icons/bs";
 import { BsX } from "react-icons/bs";
+import { AiFillHome } from "react-icons/ai";
+import { AiFillProfile } from "react-icons/ai";
+import { AiOutlineCode } from "react-icons/ai";
+import { AiFillBook } from "react-icons/ai";
+import { AiFillContacts } from "react-icons/ai";
 import { useViewportSize } from '@mantine/hooks';
+import { Drawer } from 'antd';
 
 
 const Navbar = () => {
@@ -24,27 +30,24 @@ const Navbar = () => {
     };
 
     const navLinks = [
-        { to: "home", label: "Home" },
-        { to: "projects", label: "Projects" },
-        { to: "technologies", label: "Technologies" },
-        { to: "about", label: "About" },
-        { to: "contact", label: "Contact" },
+        { to: "home", label: "Home", icon: <AiFillHome /> },
+        { to: "projects", label: "Projects", icon: <AiFillProfile /> },
+        { to: "technologies", label: "Technologies", icon: <AiOutlineCode /> },
+        { to: "about", label: "About", icon: <AiFillBook /> },
+        { to: "contact", label: "Contact", icon: <AiFillContacts /> },
     ];
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { width } = useViewportSize();
 
-  const isMobile = width < 1024; // below md breakpoint
+    const isMobile = width < 1024; // below md breakpoint
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  }
-
-  const closeMenuOnMobile = () => {
-    if (isMobile) {
-      setIsMenuOpen(false);
-    }
-  }
+    const [open, setOpen] = useState(false);
+    const showDrawer = () => {
+        setOpen(true);
+    };
+    const onClose = () => {
+        setOpen(false);
+    };
 
     return (
 
@@ -59,9 +62,26 @@ const Navbar = () => {
                     </Link>
                 ))}
             </div>
-            
-            <button className='button-menu' onClick={() => { toggleMenu(); toggleNavbar(); closeMenuOnMobile(); }}>
-                {isMenuOpen ?
+
+            <Drawer
+                closable={{ 'aria-label': 'Close Button' }}
+                onClose={onClose}
+                open={open}
+                classNames={{content: 'menu-nav'}}
+            >
+                <ul className='text-nav-mobile'>
+                    {navLinks.map((link) => (
+                        <li key={link.to}>
+                            <Link to={link.to} {...linkProps}>
+                                {link.icon}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </Drawer>
+
+            <button className='button-menu' onClick={showDrawer}>
+                {open ?
                     <BsX className='size-6 text-secondary' />
                     :
                     <BsList className='size-6 text-secondary' />

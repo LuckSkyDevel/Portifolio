@@ -21,8 +21,6 @@ img {
 body {
   max-width: 100%;
   overflow-x: hidden;
-
-  background: #121212;
 }
 
 nav {
@@ -409,6 +407,30 @@ nav {
   display: none;
 }
 
+.menu-nav {
+  background: #2b2a2a !important;
+  width: 100px !important;
+  right: 0 !important;
+  font-size: xx-large !important;
+}
+
+.ant-drawer-content-wrapper {
+  width: 100px !important;
+}
+
+.text-nav-mobile a {
+  color: #6a6a6a !important;
+  background: linear-gradient(90deg, #FFFFFF 0%, #6a6a6a 100%);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+ul {
+  list-style-type: none;
+}
+
 @media screen and (max-width: 1024px) {
 
   .App {
@@ -442,9 +464,9 @@ nav {
   }
 
   .home-bannerImage-container {
-    top: 290px;
-    right: 40px;
-    max-width: 200px;
+    top: 185px;
+    right: 0;
+    max-width: 370px;
   }
 
   .project-section-top {

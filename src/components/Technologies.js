@@ -17,7 +17,7 @@ function Technologies() {
                 <div className="tech-bannerImage-container">
                     <img src={TechGif} alt="" />
                 </div>
-                <div className='tech-text'>
+                <div className='tech-text' data-aos="zoom-out-down">
                     <p className="title-tech-text">
                         <FaNodeJs color='white' /> FrontEnd
                     </p>
@@ -25,7 +25,7 @@ function Technologies() {
                     <p>Angular</p>
                     <p>HTML/CSS</p>
                 </div>
-                <div className='tech-text'>
+                <div className='tech-text'  data-aos="zoom-out-down">
                     <p className="title-tech-text">
                         <BsDatabase color='white' /> BackEnd
                     </p>
@@ -33,7 +33,7 @@ function Technologies() {
                     <p>Java</p>
                     <p>Python and Databases</p>
                 </div>
-                <div className='tech-text'>
+                <div className='tech-text' data-aos="zoom-out-down">
                     <p className="title-tech-text">
                         <BsSlack color='white' /> Frameworks
                     </p>

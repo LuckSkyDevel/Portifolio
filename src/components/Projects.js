@@ -40,7 +40,7 @@ function Projects() {
     ];
     return (
         <div id="projects" className="project-section-wrapper">
-            <div className="project-section-top">
+            <div className="project-section-top" data-aos="fade-left" data-aos-easing="linear" data-aos-delay="1500" data-aos-offset="0">
                 <h1 className="primary-heading">Projects & Experiences</h1>
                 <p className="primary-text">
                     Some of my main projects and experiences I've worked on.
@@ -48,7 +48,7 @@ function Projects() {
             </div>
             <div className="project-section-bottom">
                 {projectInfoData.map((data) => (
-                    <div className="project-section-info" key={data.title}>
+                    <div className="project-section-info" key={data.title} data-aos="zoom-out-down" data-aos-easing="linear" data-aos-delay="1000" data-aos-offset="0">
                         <div className="info-boxes-img-container">
                             {/* <img src={data.image} alt="" /> */}
                         </div>
