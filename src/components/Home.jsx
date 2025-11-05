@@ -13,8 +13,8 @@ export default function Home() {
 
     return (
         <>
-            <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between w-full h-80 lg:h-screen px-5 lg:px-20 py-0">
-                <div className="absolute size-150 lg:size-250 -right-35 lg:right-20 z-10">
+            <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between w-full h-80 lg:h-150 px-5 lg:px-20 py-0">
+                <div className="absolute size-100 lg:size-250 right-0 lg:right-20 z-10">
                     <img src={techGif} alt="" />
                 </div>
                 <div className="relative flex-1 flex-col items-start justify-center top-10 z-20">

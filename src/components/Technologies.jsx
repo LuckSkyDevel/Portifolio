@@ -21,7 +21,7 @@ export default function Technologies() {
                 </motion.p>
             </div>
             <div className='flex flex-col lg:flex-row flex-auto justify-center items-center gap-25 lg:gap-70 px-6 lg:px-2'>
-                <div className="absolute size-150 lg:size-230 -right-35 lg:right-55 z-10 mt-90">
+                <div className="absolute size-100 lg:size-230 right-0 lg:right-55 z-10 mt-60">
                     <img src={TechGif} alt="" />
                 </div>
                 <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={transition} className='font-xl max-w-lg my-6 bg-clip-text tech-text'>

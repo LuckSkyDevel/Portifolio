@@ -10,7 +10,7 @@ export default function Contact() {
             <h1 className="primary-heading">
                 Contact-me
             </h1>
-            <div className='flex flex-row flex-wrapd justify-center items-start'>
+            <div className='flex flex-row flex-wrap justify-center items-start'>
                 <motion.a
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}

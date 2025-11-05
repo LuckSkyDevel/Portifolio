@@ -31,11 +31,11 @@ export default function Navbar() {
     };
 
     const navLinks = [
-        { to: "home", label: "Home", icon: <AiFillHome /> },
-        { to: "projects", label: "Projects", icon: <AiFillProfile /> },
-        { to: "technologies", label: "Technologies", icon: <AiOutlineCode /> },
-        { to: "about", label: "About", icon: <AiFillBook /> },
-        { to: "contact", label: "Contact", icon: <AiFillContacts /> },
+        { to: "home", label: "Home", icon: <AiFillHome size={32} className='my-6 bg-gray'  /> },
+        { to: "projects", label: "Projects", icon: <AiFillProfile size={32} className='my-6' /> },
+        { to: "technologies", label: "Technologies", icon: <AiOutlineCode size={32} className='my-6' /> },
+        { to: "about", label: "About", icon: <AiFillBook size={32} className='my-6' /> },
+        { to: "contact", label: "Contact", icon: <AiFillContacts size={32} className='my-6' /> },
     ];
 
     const { width } = useViewportSize();
@@ -68,9 +68,11 @@ export default function Navbar() {
                 closable={{ 'aria-label': 'Close Button' }}
                 onClose={onClose}
                 open={open}
-                classNames={{ content: 'menu-nav' }}
+                classNames={{ content: '!bg-gray-900/40 !text-white', header: '!text-white' }}
+                width='100px'
+                
             >
-                <ul className='text-nav-mobile'>
+                <ul>
                     {navLinks.map((link) => (
                         <li key={link.to}>
                             <Link to={link.to} {...linkProps}>
