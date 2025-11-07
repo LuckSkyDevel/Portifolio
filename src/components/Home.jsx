@@ -13,7 +13,7 @@ export default function Home() {
         ease: [0, 0.71, 0.2, 1.01],
     };
 
-    const downloadCV = () => { saveAs("https://drive.google.com/file/d/10PMTWQ1EmX1Ey4-ACS8hogiY3x6jnaUF", "CVLucasCarvalho.pdf")};
+    const downloadCV = () => { saveAs("https://docs.google.com/document/d/1ghtvS5fyuJTtJdBohkSgpFsbil8B8sGjCsYchXHsHPY", "CVLucasCarvalho.pdf")};
 
     return (
         <>
