@@ -12,6 +12,7 @@
   --font-dm-sans: 'DM Sans', sans-serif;
   --default-font-family: var(--font-k2d);
   --color-primary: linear-gradient(90deg, #FFFFFF 0%, #6a6a6a 100%);
+  --color-secondary: linear-gradient(180deg, #00C8B3 0%, #006258 100%);
 }
 
 .logo-navbar {
@@ -59,6 +60,23 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.secondary-button {
+  background: linear-gradient(180deg, #00C8B3 0%, #006258 100%);
+  @apply flex text-lg align-middle;
+}
+
+.secondary-button svg {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.secondary-button:hover {
+  background: linear-gradient(180deg, #006258 0%, #00C8B3 100%);
+  border-color: #acbcbd;
 }
 
 .primary-heading {
